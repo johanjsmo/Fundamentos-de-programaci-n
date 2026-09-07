@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Monchería MX | Antojitos Callejeros, Combos & Postres Brutales</title>
+  <meta name="description" content="El mejor local de antojitos: hamburguesas al carbón, dogos con tocino, tacos con costra, burros gigantes, waffles, crepas y malteadas en pesos mexicanos.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Favicon Emoji SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌮</text></svg>">
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ================= TOP BAR INFORMATIVO ================= -->
+  <div class="announcement-bar">
+    <span class="live-pulse"></span>
+    <span>🛵 <strong>¡Servicio Activo!</strong> Envío <strong>GRATIS</strong> en pedidos mayores a $250 MXN | Entregas de 30 a 45 min</span>
+  </div>
+
+  <!-- ================= HEADER & NAVBAR ================= -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">🌮</div>
+        <div class="brand-info">
+          <span class="brand-name">LA MONCHERÍA MX</span>
+          <span class="brand-tagline">Antojería & Sweet Treats</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#menu" class="active">🍔 Menú</a></li>
+          <li><a href="#combos">👑 Combos</a></li>
+          <li><a href="#arma-tu-antojo">🧇 Arma tu Antojo</a></li>
+          <li><a href="#promos">⚡ Promos</a></li>
+          <li><a href="#contacto">📍 Ubicación</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="status-badge" id="storeStatusBadge">
+          <span class="live-pulse"></span> Abierto Ahora
+        </div>
+        
+        <button class="btn-cart-toggle" onclick="openCartDrawer()" title="Ver carrito">
+          <span>🛒</span>
+          <span class="cart-counter">0</span>
+          <span class="cart-quick-total">$0 MXN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🔥</span> El auténtico templo del bajón urbano
+        </div>
+        <h1 class="hero-title">
+          Comida rápida con <span class="highlight">sabor de barrio</span> y antojo al máximo.
+        </h1>
+        <p class="hero-description">
+          Desde hamburguesas smash con doble queso Oaxaca, tacos con costra y burros gigantes, hasta waffles glotones y crepas que te harán suspirar. Todo preparado al momento.
+        </p>
+
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-icon">🛵</span>
+            <div class="stat-text">
+              <strong>30 - 45 min</strong>
+              <span>Tiempo de entrega</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🇲🇽</span>
+            <div class="stat-text">
+              <strong>100% en Pesos MXN</strong>
+              <span>Efectivo, Tarjeta o Transf.</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">⭐</span>
+            <div class="stat-text">
+              <strong>4.9 de 5 Estrellas</strong>
+              <span>+1,400 comensales felices</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn-primary">
+            <span>🔥 Ver Menú Completo</span>
+          </a>
+          <a href="#arma-tu-antojo" class="btn-secondary">
+            <span>🧇 Arma tu Waffle o Crepa</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <div class="hero-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Hamburguesas y antojitos Monchería MX" class="hero-image">
+        </div>
+
+        <div class="hero-floating-card card-pos-1">
+          <span class="floating-icon">🍔</span>
+          <div class="floating-text">
+            <strong>Monchosa Doble Smash</strong>
+            <span>¡Costra dorada de queso!</span>
+          </div>
+        </div>
+
+        <div class="hero-floating-card card-pos-2">
+          <span class="floating-icon">🧇</span>
+          <div class="floating-text">
+            <strong>Waffle Glotón Nutella</strong>
+            <span>Con helado artesanal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN COMBOS ESTRELLA ================= -->
+  <section class="featured-combos-section" id="combos">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Ahorro y Llenadera Garantizada</span>
+        <h2 class="section-title">👑 Combos con Identidad Monchosa</h2>
+        <p class="section-desc">Paquetes armados con la química perfecta entre comida salada, papitas, bebida y un toque dulce para cerrar con broche de oro.</p>
+      </div>
+    </div>
+
+    <div class="combos-grid" id="featuredCombosContainer">
+      <!-- Inyectado dinámicamente desde js/app.js -->
+    </div>
+  </section>
+
+  <!-- ================= MENÚ COMPLETO INTERACTIVO ================= -->
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">El Catálogo Callejero</span>
+        <h2 class="section-title">🌮 Explora Nuestro Menú</h2>
+        <p class="section-desc">Selecciona tu categoría favorita o busca tu antojito deseado. Todos los precios están en Pesos Mexicanos ($ MXN).</p>
+      </div>
+    </div>
+
+    <div class="menu-controls">
+      <div class="search-bar-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="menuSearch" class="menu-search-input" placeholder="Buscar hamburguesa, taco, burrito, waffle, crepa, boneless..." autocomplete="off">
+        <button id="clearSearchBtn" class="clear-search-btn" title="Limpiar búsqueda">✕</button>
+      </div>
+
+      <div class="categories-scroll" id="categoriesContainer">
+        <!-- Inyectado dinámicamente con las categorías -->
+      </div>
+    </div>
+
+    <div class="menu-grid" id="menuGridContainer">
+      <!-- Productos inyectados dinámicamente -->
+    </div>
+  </section>
+
+  <!-- ================= ARMA TU ANTOJO (BUILDER) ================= -->
+  <section class="builder-section" id="arma-tu-antojo">
+    <div class="builder-container">
+      <div class="builder-header">
+        <span class="builder-badge">✨ Experiencia Innovadora</span>
+        <h2 class="builder-title">Arma tu Antojo Dulce Paso a Paso</h2>
+        <p class="builder-desc">¿Tienes un antojo muy específico? Elige tu base favorita, tus untables, frutas frescas y toppings crujientes a tu gusto.</p>
+      </div>
+
+      <div class="builder-steps">
+        <!-- Paso 1: Base -->
+        <div class="builder-step-group">
+          <div class="step-label">
+            <span class="step-number">1</span>
+            <span>Elige tu Base Calientita</span>
+          </div>
+          <div class="step-options-grid" id="builderBases"></div>
+        </div>
+
+        <!-- Paso 2: Untables -->
+        <div class="builder-step-group">
+          <div class="step-label">
+            <span class="step-number">2</span>
+            <span>Elige tu Untable Principal</span>
+          </div>
+          <div class="step-options-grid" id="builderSpreads"></div>
+        </div>
+
+        <!-- Paso 3: Frutas -->
+        <div class="builder-step-group">
+          <div class="step-label">
+            <span class="step-number">3</span>
+            <span>Agrega Frutas Frescas (Puedes elegir varias)</span>
+          </div>
+          <div class="step-options-grid" id="builderFruits"></div>
+        </div>
+
+        <!-- Paso 4: Toppings Crujientes -->
+        <div class="builder-step-group">
+          <div class="step-label">
+            <span class="step-number">4</span>
+            <span>Toppings Crujientes & Galleta</span>
+          </div>
+          <div class="step-options-grid" id="builderCrunchies"></div>
+        </div>
+
+        <!-- Paso 5: Coronación Final -->
+        <div class="builder-step-group">
+          <div class="step-label">
+            <span class="step-number">5</span>
+            <span>Coronación con Nieve o Crema Batida</span>
+          </div>
+          <div class="step-options-grid" id="builderToppings"></div>
+        </div>
+      </div>
+
+      <!-- Resumen del Constructor -->
+      <div class="builder-summary-bar">
+        <div class="summary-info">
+          <span class="summary-label">Tu Creación Actual:</span>
+          <span class="summary-preview-text" id="builderSummaryText">Cargando base...</span>
+        </div>
+        <div class="summary-price-box">
+          <span class="summary-total" id="builderTotalPrice">$0 MXN</span>
+        </div>
+        <button class="btn-builder-add" onclick="addCustomBuildToCart()">
+          <span>🛒 ¡Agregar mi Antojo al Carrito!</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROMOS DEL DÍA ================= -->
+  <section class="promos-section" id="promos">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Promociones Semanales</span>
+        <h2 class="section-title">⚡ Para los Cazadores de Ofertas</h2>
+        <p class="section-desc">Aprovecha nuestras promociones programadas durante la semana y date el gusto por menos pesos.</p>
+      </div>
+    </div>
+
+    <div class="promos-grid">
+      <div class="promo-card">
+        <span class="promo-tag">MARTES DE DOGOS</span>
+        <h3 class="promo-title">2x1 en Dogos Especiales</h3>
+        <p class="promo-desc">Pides 1 Dogo Embarazado envuelto en doble tocino con quesillo y te mandamos el segundo por cuenta de la casa. ¡Válido de 6:00 PM a medianoche!</p>
+        <div class="combo-footer">
+          <span class="current-price">$75 <span>MXN x 2 piezas</span></span>
+          <button class="btn-card-action" onclick="quickAddToCart('promo-martes-dogos')">+ Agregar Promo</button>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <span class="promo-tag">JUEVES MONCHOSO</span>
+        <h3 class="promo-title">Papas Locas al 50%</h3>
+        <p class="promo-desc">En compras mayores a $180 MXN, agrega una orden de Papas Locas con carne asada y queso cheddar fundido a mitad de precio.</p>
+        <div class="combo-footer">
+          <span class="current-price">$62 <span>MXN (Antes $125)</span></span>
+          <button class="btn-card-action" onclick="quickAddToCart('promo-jueves-papas')">+ Agregar Promo</button>
+        </div>
+      </div>
+
+      <div class="promo-card">
+        <span class="promo-tag">COMBO ESTUDIANTE</span>
+        <h3 class="promo-title">Bajón Escolar & Amigos</h3>
+        <p class="promo-desc">1 Dogo Especial + Papas a la francesa medianas + Refresco en lata bien helado por solo $99 MXN. ¡Llenador y amigable con la cartera!</p>
+        <div class="combo-footer">
+          <span class="current-price">$99 <span>MXN</span></span>
+          <button class="btn-card-action" onclick="openCustomizeModal('promo-estudiante')">+ Configurar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIOS ================= -->
+  <section class="reviews-section">
+    <div class="section-header">
+      <div class="section-title-wrap">
+        <span class="section-subtitle">Opiniones Reales</span>
+        <h2 class="section-title">⭐ Lo Que Dice la Banda Monchosa</h2>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-comment">"El Burro Destapacaños está literalmente del tamaño de mi antebrazo. Bien jugoso el sirloin y con aguacate de verdad, no de ese aguacate ralo de taquería."</p>
+        <div class="review-author">
+          <div class="author-avatar">RG</div>
+          <div class="author-details">
+            <strong>Rodrigo Garza</strong>
+            <span>Cliente Frecuente en Domicilio</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-comment">"Los waffles con helado y galleta Lotus son adictivos. Lo pedimos por WhatsApp y en 30 minutos ya estaban tocando el timbre con todo calientito."</p>
+        <div class="review-author">
+          <div class="author-avatar">VM</div>
+          <div class="author-details">
+            <strong>Valeria Morales</strong>
+            <span>Amante de los Postres</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-comment">"El Combo El Mal del Puerco hace honor a su nombre. La hamburguesa doble smash con costra de queso es una barbaridad. 100% recomendado."</p>
+        <div class="review-author">
+          <div class="author-avatar">CH</div>
+          <div class="author-details">
+            <strong>Carlos Hernández</strong>
+            <span>Crítico de Comida Callejera</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER / CONTACTO ================= -->
+  <footer class="main-footer" id="contacto">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <div class="brand-icon">🌮</div>
+          <div class="brand-info">
+            <span class="brand-name">LA MONCHERÍA MX</span>
+            <span class="brand-tagline">Antojería & Sweet Treats</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Comida rápida, honesta, abundante y hecha con el corazón. Para saciar los mejores bajones diurnos y nocturnos con tus amigos y familia.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Horarios de Servicio</h4>
+        <div class="footer-info-item">
+          <span>🕒</span>
+          <div>
+            <strong>Lunes a Jueves:</strong><br>5:00 PM – 12:30 AM
+          </div>
+        </div>
+        <div class="footer-info-item">
+          <span>🔥</span>
+          <div>
+            <strong>Viernes a Domingo:</strong><br>5:00 PM – 2:00 AM (Horario extendido)
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Ubicación y Pedidos</h4>
+        <div class="footer-info-item">
+          <span>📍</span>
+          <div>Av. Revolución #742, Col. San Juan, México</div>
+        </div>
+        <div class="footer-info-item">
+          <span>📱</span>
+          <div>WhatsApp Pedidos: +52 81 2345 6789</div>
+        </div>
+        <div class="footer-info-item">
+          <span>💳</span>
+          <div>Aceptamos Efectivo, Transferencia y Tarjeta</div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="#combos">👑 Combos Populares</a></li>
+          <li><a href="#menu">🍔 Hamburguesas & Dogos</a></li>
+          <li><a href="#menu">🌮 Tacos & Burritos Gigantes</a></li>
+          <li><a href="#arma-tu-antojo">🧇 Constructor de Waffles</a></li>
+          <li><a href="#promos">⚡ Promociones Semanales</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 La Monchería MX. Todos los derechos reservados. Precios en Pesos Mexicanos (MXN).</div>
+      <div>Hecho con ❤️, sazón callejero y tecnología moderna.</div>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL DE PERSONALIZACIÓN ================= -->
+  <div class="modal-overlay" id="customizeModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeCustomizeModal()">✕</button>
+      <div class="modal-image-header">
+        <img src="" id="modalImage" alt="Platillo">
+      </div>
+      <div class="modal-body">
+        <div>
+          <h3 class="modal-title" id="modalTitle">Nombre del Antojito</h3>
+          <p class="modal-description" id="modalDesc">Descripción completa con los ingredientes que incluye.</p>
+        </div>
+
+        <div id="modalDynamicSections">
+          <!-- Opciones dinámicas de salsa, bebida y extras -->
+        </div>
+
+        <div class="modal-section">
+          <div class="modal-section-title">
+            <span>📝 Instrucciones Especiales para Cocina</span>
+          </div>
+          <textarea class="modal-notes-input" id="modalNotes" placeholder="Ej: Sin cebolla, bien doradito el tocino, salsa aparte..."></textarea>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="qty-control">
+          <button class="qty-btn" onclick="changeModalQty(-1)">-</button>
+          <span class="qty-value" id="modalQtyDisplay">1</span>
+          <button class="qty-btn" onclick="changeModalQty(1)">+</button>
+        </div>
+        <button class="btn-modal-add" onclick="submitModalAddToCart()">
+          <span>Agregar al Carrito</span>
+          <span id="modalBtnPrice">$0 MXN</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MODAL DE CHECKOUT (FORMULARIO WHATSAPP) ================= -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-card" style="max-width: 500px;">
+      <button class="modal-close-btn" onclick="closeCheckoutModal()">✕</button>
+      <div class="modal-body" style="padding: 28px 24px;">
+        <h3 class="modal-title" style="display: flex; align-items: center; gap: 8px;">
+          <span>📲</span> Confirmar y Enviar Pedido
+        </h3>
+        <p class="modal-description">
+          Tu orden se enviará con formato detallado directamente a nuestro WhatsApp oficial para iniciar la preparación de inmediato.
+        </p>
+
+        <form class="checkout-form" onsubmit="submitOrderToWhatsApp(event)">
+          <div class="form-group">
+            <label for="clientName">👤 Tu Nombre Completo *</label>
+            <input type="text" id="clientName" class="form-input" placeholder="Ej: Juan Pérez" required>
+          </div>
+
+          <div class="form-group">
+            <label for="clientPhone">📱 Tu Teléfono / WhatsApp *</label>
+            <input type="tel" id="clientPhone" class="form-input" placeholder="Ej: 81 1234 5678" required>
+          </div>
+
+          <div class="form-group" id="checkoutAddressGroup">
+            <label for="clientAddress">📍 Dirección de Entrega (Calle, Número, Colonia, Referencias) *</label>
+            <input type="text" id="clientAddress" class="form-input" placeholder="Ej: Calle Pino #123, Col. Centro (portón negro)">
+          </div>
+
+          <div class="form-group">
+            <label>💳 Método de Pago *</label>
+            <div class="payment-methods-grid">
+              <label class="pay-card selected" onclick="selectPaymentMethod('efectivo', this)">
+                <input type="radio" name="payMethod" value="Efectivo" checked style="display:none">
+                <span class="pay-icon">💵</span>
+                <span>Efectivo</span>
+              </label>
+              <label class="pay-card" onclick="selectPaymentMethod('transferencia', this)">
+                <input type="radio" name="payMethod" value="Transferencia" style="display:none">
+                <span class="pay-icon">📲</span>
+                <span>Transferencia</span>
+              </label>
+              <label class="pay-card" onclick="selectPaymentMethod('tarjeta', this)">
+                <input type="radio" name="payMethod" value="Tarjeta contra entrega" style="display:none">
+                <span class="pay-icon">💳</span>
+                <span>Tarjeta</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group" id="cashChangeGroup">
+            <label for="cashBillAmount">💵 ¿Con cuánto vas a pagar? (Para llevarte cambio exacto)</label>
+            <input type="number" id="cashBillAmount" class="form-input" placeholder="Ej: $500 MXN">
+          </div>
+
+          <div class="form-group">
+            <label for="orderSpecialNotes">💬 Instrucciones Adicionales para el Repartidor</label>
+            <input type="text" id="orderSpecialNotes" class="form-input" placeholder="Ej: Tocar el timbre blanco, llamar al llegar...">
+          </div>
+
+          <button type="submit" class="btn-checkout-whatsapp" style="margin-top: 10px;">
+            <span>💬 Enviar Pedido a WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DRAWER DEL CARRITO DE COMPRAS ================= -->
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeCartDrawer()"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2><span>🛒</span> Mi Antojo Actual</h2>
+      <button class="cart-header-close" onclick="closeCartDrawer()">✕</button>
+    </div>
+
+    <!-- Barra de progreso para Envío Gratis -->
+    <div class="delivery-progress-wrap">
+      <div class="progress-text" id="deliveryProgressText">
+        <span>Faltan <strong>$250 MXN</strong> para Envío Gratis</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="deliveryProgressBar"></div>
+      </div>
+    </div>
+
+    <!-- Toggle Domicilio / Recoger -->
+    <div class="order-type-switch">
+      <button class="type-btn active" data-type="delivery" onclick="setOrderType('delivery')">🛵 A Domicilio</button>
+      <button class="type-btn" data-type="pickup" onclick="setOrderType('pickup')">🛍️ Para Recoger</button>
+    </div>
+
+    <!-- Lista de Productos -->
+    <div class="cart-items-list" id="cartItemsContainer">
+      <!-- Items agregados se mostrarán aquí -->
+    </div>
+
+    <div class="cart-empty-state" id="cartEmptyState">
+      <span class="cart-empty-icon">🍟</span>
+      <h3 style="color:#fff;">Tu carrito está vacío</h3>
+      <p>Agrega unos buenos tacos, un dogo con tocino o un waffle para calmar el bajón.</p>
+    </div>
+
+    <!-- Footer con Totales y Checkout -->
+    <div class="cart-footer" id="cartFooter" style="display: none;">
+      <div class="cart-breakdown">
+        <div class="breakdown-row">
+          <span>Subtotal:</span>
+          <span id="cartSubtotal">$0 MXN</span>
+        </div>
+        <div class="breakdown-row">
+          <span>Costo de Envío:</span>
+          <span id="cartShippingCost">$35 MXN</span>
+        </div>
+        <div class="breakdown-row total-row">
+          <span>Total a Pagar:</span>
+          <span class="total-amount" id="cartTotal">$0 MXN</span>
+        </div>
+      </div>
+
+      <button class="btn-checkout-whatsapp" onclick="openCheckoutModal()">
+        <span>Pedir por WhatsApp 💬</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ================= BOTÓN FLOTANTE MÓVIL CARRITO ================= -->
+  <div class="mobile-floating-cart">
+    <button class="btn-cart-toggle" onclick="openCartDrawer()" style="padding: 14px 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.6);">
+      <span>🛒</span>
+      <span class="cart-counter">0</span>
+      <span class="cart-quick-total">$0 MXN</span>
+    </button>
+  </div>
+
+  <!-- ================= TOAST DE NOTIFICACIÓN ================= -->
+  <div class="toast-notification" id="appToast">
+    <span class="toast-icon">✓</span>
+    <span id="toastText">¡Producto agregado al carrito!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
